@@ -1,0 +1,97 @@
+/***************************************************************************************
+*    Title: Flight Data Visualization
+*    Author: Ishita Mathur and Neha Bhagwat
+*    Date: April 1, 2018
+***************************************************************************************/
+
+body{
+	background-color: #011313
+}
+
+logo{
+	position: absolute;
+	/*left:1030px;*/
+	/*top:20px;*/
+  left:72%;
+  top:1%;
+	height:80px;
+	width: 100px;
+	background-color: #011313
+}
+
+
+#clock{
+	height:80px;
+	width:100px;
+	position:absolute;
+	top:3%;
+	left:90%;
+	font-family: courier, monospace;
+	text-align: center;
+	color:#0ADEE2;
+	font-size: 20px;
+	background-color: #011313;
+}
+
+#selectSrc{
+  width: 250px;
+}
+
+#selectDest{
+  width: 250px;
+}
+
+dropdown1{
+	position:absolute;
+	left:75%;
+	top:33%;
+	width:10px;
+}
+
+dropdown2{
+	position:absolute;
+	left:75%;
+	top:40%;
+}
+
+dropdown3{
+	position:absolute;
+	left:75%;
+	top:47%;
+}
+
+button1{
+	position:absolute;
+	left:75%;
+	top:54%;
+}
+
+
+
+dropdown4{
+	position: absolute;
+	left:75%;
+	top:40%;
+	width:30px;
+}
+
+button2{
+	position:absolute;
+	left:75%;
+	top:47%;
+}
+
+button3{
+  position:absolute;
+  left:75%;
+  top:40%;
+}
+
+label1{
+  position:absolute;
+  top:61%;
+  left:75%;
+  background-color: black;
+  color: red;
+  font-weight: bold;
+}

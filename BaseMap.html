@@ -1,0 +1,102 @@
+<!-- /***************************************************************************************
+*    Title: Flight Data Visualization
+*    Author: Ishita Mathur and Neha Bhagwat
+*    Date: March 23, 2018
+***************************************************************************************/ -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" type = "image/png" href="tinyLogo.png"/>
+    <title>FlyHigh Application</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+        width: 70%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="Routes.css">
+  </head>
+
+  <body>
+    <div id="map"></div>
+
+    <script src="plotsFinal.js">
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=TYPEYOURKEYHERE&callback=initMap"
+    async defer></script>
+
+    <input type = "file" id="input" onchange="mainFun(this.files)" accept = "file_extension"/>
+    <logo>
+    <img src="FlyHighNew.jpeg" height = "50" width = "100">
+    </logo>
+
+    <div id="clock"></div>
+    <dropdown1>
+    <select onchange="selectFunction(this)">
+      <option value="">Select</option>
+      <option value="airports">All Airports</option>
+      <option value="routes">All Routes</option>
+      <option value="specificroute">Specific Route</option>
+      <option value="airline">Specific Airline</option>
+      <option value="explore">Explore</option>
+    </select>
+  </dropdown1>
+
+    <form id="srcdest">
+    <dropdown2>
+    <select name="selectSrc" id="selectSrc" onchange="selectedSrc()" hidden="true">
+    </select>
+  </dropdown2>
+
+    <dropdown3>
+    <select name="selectDest" id="selectDest" onchange="selectedDest()" hidden="true">
+    </select>
+  </dropdown3>
+
+    <button1>
+    <input type="button" id="routebutton" value="Show routes" onclick="routeButton()" hidden="true">
+  </button1>
+
+ <!--    <text1>
+    <label id="distance" hidden="true"></label>
+  </text1> -->
+
+    <dropdown4>
+    <select id = "selectAirline" onchange = "changedAirline()" hidden="true" onautocomplete="true">
+    </select>
+  </dropdown4>
+
+    <button2>
+    <input type="button" id="airlinebutton" value="Show routes" onclick="airlineButton()" hidden="true" />
+  </button2>
+
+  <button3>
+  <input type="button" id="resetbutton" value="Reset" onclick="resetButton()" hidden="true"/>
+</button3>
+
+<label1>
+  <label id="errorLabel" hidden="true">
+  </label>
+</label1>
+
+  </form>
+
+ <!--    <text2>
+    <label id="airlinedisplay" hidden="true"></label>
+  </text2> -->
+
+  </body>
+</html>
